@@ -344,6 +344,13 @@ h6 { font-size: 1.125rem; font-weight: 700; }
     border-color: rgba(255, 255, 255, .30);
 }
 
+.auth-btn-row {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
 .glass {
     background: rgba(255, 255, 255, .06);
     border: 1px solid rgba(255, 255, 255, .10);
@@ -545,6 +552,25 @@ img.loaded {
     .btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .auth-btn-row {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .auth-btn-row .auth-btn {
+        width: auto;
+        flex: 1;
+        height: 38px;
+        padding: 0 14px;
+        font-size: 13px;
+        justify-content: center;
+    }
+
+    .auth-btn-row .auth-btn svg {
+        width: 14px;
+        height: 14px;
     }
 
     .hero {

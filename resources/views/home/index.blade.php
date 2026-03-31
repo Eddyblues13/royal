@@ -21,37 +21,58 @@
                     @auth
                     <a href="{{ route('dashboard.investments') }}" class="btn primary"
                         style="background: #2563EB; border-color: #2563EB;">
-                        @else
-                        <a href="{{ route('invest') }}" class="btn primary"
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 17l6-6 4 4 8-8" />
+                            <path d="M21 7v6h-6" />
+                        </svg>
+                        Start Investing
+                    </a>
+                    @else
+                    <div class="auth-btn-row">
+                        <a href="{{ route('login') }}" class="btn primary auth-btn"
                             style="background: #2563EB; border-color: #2563EB;">
-                            @endauth
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 17l6-6 4 4 8-8" />
-                                <path d="M21 7v6h-6" />
+                                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                                <polyline points="10 17 15 12 10 7" />
+                                <line x1="15" y1="12" x2="3" y2="12" />
                             </svg>
-                            Start Investing
+                            Login
                         </a>
 
-                        <a href="{{ route('stocks') }}"
-                            class="btn outline hover:border-[#2563EB] hover:text-[#2563EB] transition-colors">
+                        <a href="{{ route('register') }}"
+                            class="btn outline auth-btn hover:border-[#2563EB] hover:text-[#2563EB] transition-colors"
+                            style="border-color: #2563EB; color: #2563EB;">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 19V5" />
-                                <path d="M4 19h16" />
-                                <path d="M8 15l3-3 3 3 6-6" />
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="8.5" cy="7" r="4" />
+                                <line x1="20" y1="8" x2="20" y2="14" />
+                                <line x1="23" y1="11" x2="17" y2="11" />
                             </svg>
-                            Explore Stocks
+                            Register
                         </a>
+                    </div>
+                    @endauth
 
-                        <a href="{{ route('inventory') }}"
-                            class="btn outline hover:border-[#2563EB] hover:text-[#2563EB] transition-colors">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 12h18" />
-                                <path d="M6 12l3-7h6l3 7" />
-                                <path d="M7 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
-                                <path d="M17 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
-                            </svg>
-                            View Inventory
-                        </a>
+                    <a href="{{ route('stocks') }}"
+                        class="btn outline hover:border-[#2563EB] hover:text-[#2563EB] transition-colors">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19V5" />
+                            <path d="M4 19h16" />
+                            <path d="M8 15l3-3 3 3 6-6" />
+                        </svg>
+                        Explore Stocks
+                    </a>
+
+                    <a href="{{ route('inventory') }}"
+                        class="btn outline hover:border-[#2563EB] hover:text-[#2563EB] transition-colors">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12h18" />
+                            <path d="M6 12l3-7h6l3 7" />
+                            <path d="M7 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+                            <path d="M17 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+                        </svg>
+                        View Inventory
+                    </a>
                 </div>
 
                 <!-- small 3 cards row -->
